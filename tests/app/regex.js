@@ -46,7 +46,7 @@ define([
 
     it('you should be able to detect correctly-formatted monetary amounts in USD', function() {
       expect(answers.isUSD('$132.03')).to.eql(true);
-      expect(answers.isUSD('$32.03')).to.eql(true);
+	  expect(answers.isUSD('$32.03')).to.eql(true);
       expect(answers.isUSD('$2.03')).to.eql(true);
       expect(answers.isUSD('$1,023,032.03')).to.eql(true);
       expect(answers.isUSD('$20,933,209.93')).to.eql(true);
@@ -59,7 +59,7 @@ define([
       expect(answers.isUSD('$34,344_34')).to.eql(false);
       expect(answers.isUSD('$3,432,12.12')).to.eql(false);
       expect(answers.isUSD('$3,432,1,034.12')).to.eql(false);
-      expect(answers.isUSD('4$3,432,034.12')).to.eql(false);
+      expect(answers.isUSD('4$3,432,034.12')).to.eql(false);	  
     });
 
   });

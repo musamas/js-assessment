@@ -34,7 +34,7 @@ define([
       setTimeout(function () {
         expect(nums.length > 1).to.be.ok;
         expect(nums.length < 5).to.be.ok;
-      }, 200);
+      }, 202);
 
       setTimeout(function () {
         expect(nums.length).to.eql(5);
