@@ -68,7 +68,7 @@ define([
           c = Math.random(),
           d = Math.random();
 
-      //expect(answers.useArguments(a)).to.eql(a);
+      expect(answers.useArguments(a)).to.eql(a);
       expect(answers.useArguments(a, b)).to.eql(a + b);
       expect(answers.useArguments(a, b, c)).to.eql(a + b + c);
       expect(answers.useArguments(a, b, c, d)).to.eql(a + b + c + d);
