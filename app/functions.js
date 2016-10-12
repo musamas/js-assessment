@@ -59,7 +59,25 @@ define(function() {
     },
 
     curryIt : function(fn) {
-
+        var expArgCount = fn.length;
+	var args = [];
+	    
+	return checkArgs(args);
+	    
+	function checkArgs (args) {
+	    if (args.length == expArgCount){
+		return fn.apply(null, args);
+	    }    else {
+       	        return addArguments(args);
+	    }
+	}
+	    
+	function addArguments (args) {
+	    return function (arg) {
+		args.push(arg);
+		return checkArgs(args);
+	    };
+	}
     }
   };
 });
